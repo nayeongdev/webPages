@@ -6,14 +6,17 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <button onclick="
-    document.querySelector('body').style.backgroundColor = 'black'
-    document.querySelector('body').style.color = 'white';
-    ">night</button>
-  <button onclick="
-      document.querySelector('body').style.backgroundColor = 'white'
-      document.querySelector('body').style.color = 'black';
-    ">day</button>
+  <button id="night_mode" onclick="
+      if (document.querySelector('#night_mode').textContent==='night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_mode').textContent='day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_mode').textContent='night';
+      }
+  ">night</button>
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
