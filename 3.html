@@ -3,38 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>WEB - JavaScript</title>
+  <script>
+    function nightDayHandler(self) {
+      let target = document.querySelector('body');
+
+      if (self.textContent === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.textContent = 'day';
+
+        let alist = document.querySelectorAll('a');
+        let i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'powderblue';
+          console.log(alist[i]);
+          i++;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.textContent = 'night';
+
+        let alist = document.querySelectorAll('a');
+        let i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = '';
+          console.log(alist[i]);
+          i++;
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <button onclick="
-    let target = document.querySelector('body');
-
-    if (this.textContent==='night') {
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.textContent='day';
-
-      let alist = document.querySelectorAll('a');
-      let i = 0;
-      while (i<alist.length) {
-        alist[i].style.color = 'powderblue';
-        console.log(alist[i]);
-        i++;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.textContent='night';
-
-      let alist = document.querySelectorAll('a');
-      let i = 0;
-      while (i<alist.length) {
-        alist[i].style.color = '';
-        console.log(alist[i]);
-        i++;
-      }
-    }
-  ">night</button>
+  <button onclick="nightDayHandler(this);">night</button>
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
