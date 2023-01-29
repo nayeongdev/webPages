@@ -8,7 +8,8 @@
     body {
       margin: 0;
     }
-  
+
+    
     h1 {
       font-size: 45px;
       padding-bottom: 20px;
@@ -16,7 +17,7 @@
       border-bottom: 1px solid gray;
       margin: 0;
     }
-  
+    
     a {
       text-decoration: none;
     }
@@ -29,11 +30,15 @@
       padding-left: 30px;
     }
   
+    .btn{
+      margin: 10px;
+    }
+    
     #grid {
       display: grid;
       grid-template-columns: 150px 1fr;
     }
-  
+    
     #article {
       padding-left: 20px;
     }
@@ -52,9 +57,11 @@
       }
     }
   </style>
+  <script src="colors.js"></script>
 </head>
 
 <body>
+  <button class="btn" onclick="nightDayHandler(this);">night</button>
   <h1><a href="index.html">WEB</a></h1>
   <div id="grid">
     <ol>
